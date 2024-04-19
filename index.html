@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+  <meta property='og:type' content='website'>
+  <meta property='og:title' content='Umezawa-s'>
+  <meta property='og:url' content='URL入る'>
+  <meta property='og:description' content='Umezawa-s'>
+  <meta property="og:image" content="img/Designer (11).jpeg">
+  <meta name="description" content="Umezawa-s" />
+  <title>Umezawa-s</title>
+  <link href="https://fonts.googleapis.com/css?family=Yesteryear" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Oswald:700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:700" rel="stylesheet">
+  <link href="css/reset.css" media="all" rel="stylesheet" type="text/css" />
+  <link href="css/photoswipe/photoswipe.css" media="all" rel="stylesheet" type="text/css" />
+  <link href="css/photoswipe/default-skin/default-skin.css" media="all" rel="stylesheet" type="text/css" />
+  <link href="css/style.css" media="all" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+  <link rel="shortcut icon" href="img/Designer-_11_.ico" />
+  <link rel="apple-touch-icon" href="img/Designer (11).png" sizes="180x180">
+  <link rel="icon" type="image/png" href="img/Designer (11).png" sizes="192x192">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+</head>
+  <style>
+.blue {
+    color: blue; /* テキストの色を青に設定 */
+}
+    
+.ac-box{
+width: auto;
+margin: 30px auto 5px;
+}
+
+.ac-box label{
+max-width: 385px;
+font-size: 16px;
+font-weight: bold;
+text-align: center;
+background: #0066FF;
+margin: auto;
+line-height: 50px;
+position: relative;
+display: block;
+height: 50px;
+border-radius: 8px;
+cursor: pointer;
+color: #fff;
+transition: all 0.5s;
+}
+
+.ac-box label:hover{
+background: rgba( 0, 102, 255, 0.55 );
+-webkit-transition: all .3s;
+transition: all .3s;
+}
+    
+.ac-box input{
+display: none;
+}
+    
+.ac-box div{
+height: 0px;
+padding: 0px;
+overflow: hidden;
+opacity: 0;
+transition: 0.5s;
+}
+
+.ac-box input:checked ~ div{
+height: auto;
+padding: 5px;
+background: #ffffff;
+opacity: 1;
+}
+
+.ac-box div p{
+color: #777;
+line-height: 23px;
+font-size: 14px;
+padding: 20px;
+text-align: justify;
+}
+.ac-small p{
+margin-bottom: 0px;
+}
+
+.section:nth-child(odd) {
+  background-color: #ffffff; /* 白 */
+}
+
+.section:nth-child(even) {
+  background-color: #f0f0f0; /* グレー */
+}
+.underl {
+    text-decoration: underline;
+}
+
+@media screen and (min-width: 600px) {
+iframe.youtube-16-9 {
+width: 560px;
+height: 315px;
+aspect-ratio: 16 / 9;
+}
+    .field {
+  display: flex;
+  justify-content: center;
+    }
+    .me{
+  margin-top: 40px;  
+    }
+    .futsal {
+  margin-right: 50px;
+}
+    .futsal2 {
+  margin-top: 80px;      
+}
+/* 最後の子要素にはマージンを適用しないため、margin-rightを0に設定 */
+.child:last-child {
+  margin-right: 0;
+}
+}
+@media screen and (max-width: 600px) {
+iframe.youtube-16-9 {
+width: 100%;
+height: auto;
+aspect-ratio: 16 / 9;
+}
+    .field {
+        flex-direction: column; /* 要素を縦に並べる */
+    }
+    .child img {
+        margin: 0 auto; /* 画像を水平方向にセンターに配置 */
+        display: block; /* 画像をブロックレベル要素として扱う */
+    }
+      .futsal3 {
+  margin-bottom: 30px;      
+}
+  .section-title {
+    font-size: 20px;
+}
+}
+
+ /* === ラジオボタンは非表示 ================== */
+#langChenge input[type="radio"]{
+  display    : none;
+}
+ 
+ /* === 各ラジオボタンのラベルをボタンに変更 == */
+#langChenge label{
+  display    : inline-block;
+  border     : 1px solid #ccc;
+  box-shadow : 2px 2px #999;
+  padding    : 2px 6px;
+}
+ 
+ /* === 選択されていない言語は非表示にする ==== */
+#langJa:not(:checked) ~ * *:lang(ja) {
+  display    : none;
+}
+#langEn:not(:checked) ~ * *:lang(en) {
+  display    : none;
+}
+ 
+ /* === 選択されている言語のラベル色を変更 ==== */
+#langJa:checked ~ label[for="langJa"] {
+  background : #ffa64d;
+}
+#langEn:checked ~ label[for="langEn"] {
+  background : #ffa64d;
+}
+  </style>
+<body>
+  <div id="wrapper">
+    <header id="header">
+      <h1 class="logo">
+        <span class="logo-title">Umezawa-s</span>
+        <span class="logo-desc">IT Solutions Architect / PjM / PdM / PMO</span>
+      </h1>
+    </header>
+    <nav id="gnav">
+      <ul>
+        <li><i class="fas fa-user fa-lg"><a href="#Profile">PROFILE</a></i></li>
+        <li><i class="fas fa-tasks fa-lg""><a href="#EXPERIENCE">EXPERIENCE</a></i></li>
+        <li><i class="fas fa-envelope fa-lg"><a href="#contact">CONTACT</a></i></li>
+  <li id="langChenge2"><div id="langChenge">
+    <input type="radio" name="land" id="langJa" checked>
+    <input type="radio" name="land" id="langEn">
+  <label for="langJa">
+    <span lang="ja">日本語</span>
+    <span lang="en">日本語</span>
+  </label>
+  <label for="langEn">
+    <span lang="ja">English</span>
+    <span lang="en">English</span>
+  </label>
+</div></li>
+      </ul>
+    </nav>
+    <main id="contents">
+
+      <section class="section" id="Profile">
+        <div class="inner">
+          <div class="section-title-block">
+            <h2 class="section-title"><i class="fas fa-user"><span class="section-title-css">PROFILE</span></i></h2>
+          </div>
+          <div class="field">
+            <div class="profile child futsal futsal3"><img src="img/profile/プロフィール.jpg" width=300px></div>
+            <div class="child me"><h5>NAME：ウメザワ　シュウタ<br>BIRTH：1994</h5><br><br>略歴：<br>フットサルプレーヤーとして活動するため、20歳時にイタリアへと渡り1年間活動。<br>帰国後は大阪、仙台で活動し、23歳時に引退。<br>引退後は、パソコン教室の教室責任者、コンビニ専門の経営コンサルタントを経て、<br>社内SEとしての現在にいたる。</div>
+          </div>
+        <br><br>
+          <div class="field">
+            <div class="child futsal futsal2 futsal3"><img src="img/profile/プロフィールcalcio.jpg" width=350px></div>
+            <div class="child futsal futsal3"><img src="img/profile/イタリア時代新聞①.PNG" width=350px></div>
+            <div class="child futsal futsal2"><img src="img/profile/イタリア時代キャプテン.JPG" width=350px></div>
+            </div>
+          <div class="ac-box">
+            
+<input id="ac-1" name="accordion-1" type="checkbox" />
+<label for="ac-1" style="bottom: 5px;"> 関連記事を表示</label>
+<div class="ac-small">
+<a href ="http://www.f-netweb.com/cfl/futsal/thai2012.html"><p style="color: blue;">関東大学フットサルリーグ選抜 タイ遠征</p></a>
+<a href ="https://www.europlus.jp/fita/%E3%83%95%E3%83%83%E3%83%88%E3%82%B5%E3%83%AB%E5%A4%A7%E5%AD%A6%E9%81%B8%E6%8A%9C%E3%82%BF%E3%82%A4%E9%81%A0%E5%BE%81%E3%80%9C%E5%A4%A7%E5%AD%A6%E9%81%B8%E6%8A%9C%E3%83%A1%E3%83%B3%E3%83%90%E3%83%BC/">
+  <p style="color: blue;">フットサル歴半年、遠征をキッカケに急成長し、タイでの試合で２ゴール</p></a>
+    <center><iframe class="youtube-16-9" src="https://www.youtube.com/embed/ToMudsT9-TU?si=e352ObRFGrZenUfU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></center>
+</div>
+</div>
+        </div>
+</section>
+
+<section class="section">
+<div class="inner">
+<div class="section-title-block">
+<h2 class="section-title"><span class="section-title-css">STRONG</span></h2>
+</div>
+<h5><strong>-『自分を変容し、チームを変容させて目的達成に近づける』</strong></h5><br>
+<p>これまでに様々な環境で、様々な価値観を持つ人たちと、様々な立場で業務を行ってきました。<br>キャリアを見ただけで伝わる"専門領域"はないのですが、<br><h5><strong>　・当事者の言葉を直接聞いて、想像し、課題を捉える</strong></h5><br><h5><strong>　・will（理想）やmust（必須）だけではなく、can（可能）の観点を厳しく見積もり、やること/やらないことを決める</strong></h5><br><h5><strong>　・違和感を軽視せず、納得感が醸成されるまでメンバー/自分自身と向き合う</strong><br></h5><br><h5><strong>　・文字や図に起こすなど、その時々で最適な伝達手段を用いて"言葉の定義"や"認識"を揃える</strong></h5><br><h5><strong>　・チームに足りない能力は自分が習得して補う</strong></h5><br><h5><strong>　・他分野の事例の本質を抽象化し、転用する</strong></h5><br><h5><strong>　・当たり前を疑う</strong></h5><br>を実践して、自分ひとりでは成し得なかったことを成し遂げてきました。<br><br>その経験から、『自分を変容し、チームを変容させて目的達成に近づける』ということが、これまでの経験で一貫して培ってきた自身の専門領域、強みと捉えています。</p>
+</section>
+
+<section class="section">
+<div class="inner">
+<div class="section-title-block">
+<h2 class="section-title"><span class="section-title-css">How</span></h2>
+</div>
+<h6><strong>ex.1</strong></h6>
+<h5><strong>『課題に対し、問いを立て、仮説を構築し、公理を用いて*調査要件を定める』</strong></h5>
+<p>*調査要件・・・仮説の確からしさを判定する情報を得るために「なにを、どう調査するのか」という要件</p>
+<br>
+<p><strong>①問い</strong></p>
+<p>　反社会的行動は、小学校高学年～中学校にかけて増加する原因は何か？</p>
+<p><strong>②仮説（暫定的な説明）</strong></p>
+<p>　思春期の生理的変化によって生じる心理的葛藤が有力な原因の1つ</p>
+<p><strong>③調査要件の定義</strong></p>
+<p>　11歳～13歳くらいにかけて、「生理的変化」は男子よりも女子の方が早くあらわれる（公理）</p>
+<p>　つまり、「11～13歳の反社会的行動の増加は、女子の方により顕著にあらわれれば、
+<br>　思春期の生理的変化が原因の一つといえる」(可能性が高い)</p>
+<p>➡<strong>調査要件：</strong>11～13歳の男子・女子それぞれの反社会的行動の割合を層化抽出法を使って調査する</p>
+</section>
+      
+      <section class="section" id="EXPERIENCE">
+        <div class="inner">
+          <div class="section-title-block">
+            <h2 class="section-title"><i class="fas fa-tasks fa-lg"><span class="section-title-css">EXPERIENCE</span></i></h2>
+            </div>
+          <br>
+          <h5><a href ="https://github.com/enterumez/portforio/tree/main" target="_blank">Github</a></h5>
+          <br>
+          <h6>在籍期間：2022～現在</h6><h4 class="underl">株式会社NGK</h4><h5>社内SE</h5>
+          <p>　●kintone構築・運用<br>　　・要求整理<br>　　・要件定義<br>　　・要件定義書など各種ドキュメント作成<br>　　・<a href ="https://github.com/enterumez/portforio/tree/main/%E7%A4%BE%E5%86%85SE/kintone" target="_blank">カスタマイズファイル</a>作成（javascript）<br>　　・マニュアル作成
+          <br><br>　●MA（マーケティングオートメーション）ツール活用<br><br>　●プライバシーマーク取得プロジェクト担当<br><br>　●人事情報ソフトウェア開発PjM<br>　　・市場調査<br>　　・ベンダーとのコミュニケーション<br>　　・要求整理<br>　　・要件定義<br>　　・各種ドキュメント作成<br>　　・ISO27001/27017準拠の体制/環境作り<br>　　・<a href ="https://github.com/enterumez/portforio/tree/main/%E7%A4%BE%E5%86%85SE/%E4%BA%BA%E4%BA%8B%E6%83%85%E5%A0%B1pj" target="_blank">マニュアル</a>作成<br>　　・ユーザー説明会の実施<br>　　・<a href ="https://ngk-o-en.jp" target="_blank">ヘルプサイト</a>制作→改善点分析<br>　　・ヘルプデスク<br>　　・ユーザインタビュー<br>　　・<a href ="https://github.com/enterumez/portforio/tree/main/%E7%A4%BE%E5%86%85SE/%E4%BA%BA%E4%BA%8B%E6%83%85%E5%A0%B1pj" target="_blank">インシデント管理 体制構築・運用</a><br>　　・<a href ="https://github.com/enterumez/portforio/tree/main/%E7%A4%BE%E5%86%85SE/%E4%BA%BA%E4%BA%8B%E6%83%85%E5%A0%B1pj" target="_blank">SLO/利用規約/プライバシーポリシー</a>の作成<br>　　・サポートツールの作成(Excel VBA)
+          <br><br>　●<a href="https://github.com/enterumez/portforio/tree/31474cfbee742356bc3c600d7a0fd3cfcb23cd97/%E7%A4%BE%E5%86%85SE/Excel%20VBA">業務効率化プログラムファイル</a>の作成（Excel VBA）
+          <br><br>　●<a href = "https://www.n-genkika.co.jp/" target="_blank">公式HP</a>改修
+          <br><br><h6>在籍期間：2020～2022</h6><h4 class="underl">株式会社セブン-イレブン・ジャパン</h4><h5>FC加盟店のオーナー様とともに、店舗ごとの売上/利益を改善する経営相談員</h5>
+          <br><br><h6>在籍期間：2017～2020</h6><h4 class="underl">株式会社イー・トラックス</h4><h5>初中級者向けのパソコン教室の教室責任者</h5>
+          <br>
+          <br>
+          <h5>＊2022年に「Enter IT Support」を開業し、個人事業としてkintone運用支援を2社に対して実施</h5>
+        </div>
+</section>
+      
+<section class="section">
+<div class="inner">
+<div class="section-title-block">
+<h2 class="section-title"><span class="section-title-css">QUALIFICATIONS</span></h2>
+</div>
+                <h5>・ITパスポート</h5>
+                <br>
+                <h5>・Excel VBAスタンダード</h5>
+                <br>
+                <h5>・統計検定2級</h5>
+                <br>
+                <h5>・kintone カスタマイズSP</h5>
+                <br>
+                <h5>・kintone アプリデザインSP</h5>
+                <br>
+                <h5>・イタリア語検定 3級</h5>
+</div>
+</section>
+
+<section class="section">
+<div class="inner">
+<div class="section-title-block">
+<h2 class="section-title"><span class="section-title-css">EDUCATION</span></h2>
+</div>
+            <h5>私立日本大学付属藤沢高等学校　卒業</h5><br>
+            <h5>私立玉川大学リベラルアーツ学部リベラルアーツ学科 中退　→　渡伊</h5><br>
+            <h5>電気通信大学高度技術研修『独り立ちデータサイエンティスト 養成講座』　修了</h5><br>
+            <p>　<strong>●ITリテラシ</strong></p>
+            <p>　　・GCPでVM作成</p>
+            <p>　　・ssh通信を使ったリモート・サーバへのアクセス</p>
+            <p>　　・文字コードと正規表現</p>
+            <p>　　・TCP/IPとhtml概論</p>
+            <p>　　・GitやGit Hubの利用</p>
+            <p>　　・SQL入門</p><br>
+            <p>　<strong>●データサイエンス Python100本ノック（構造化データ加工編）</strong></p><br>
+            <p>　<strong>●EDAとモデル作成の基礎</strong></p><br>
+            <p>　<strong>●モデル作成→kaggle参加</strong><br>
+            <p>　　Google colaboratoryでPythonを扱い、「不動産価格予測モデル(回帰モデル)」「飲料購入予測モデル（判別モデル）」を作成</p><br>
+            <p>　<strong>●統計検定2級 取得</strong></p>
+            <br>
+            <br>         
+            </div>
+</section>
+<section class="section">
+<div class="inner">
+<div class="section-title-block">
+<h2 class="section-title"><span class="section-title-css">OUTPUT</span></h2>
+<iframe class="speakerdeck-iframe" frameborder="0" src="https://speakerdeck.com/player/8eaed11763ea4d0d901a4bf870ac52c7" title="プライシングについて" allowfullscreen="true" style="border: 0px; background: padding-box padding-box rgba(0, 0, 0, 0.1); margin: 0px; padding: 0px; border-radius: 6px; box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 40px; width: 100%; height: auto; aspect-ratio: 560 / 315;" data-ratio="1.7777777777777777"></iframe>
+</section>
+
+      <section class="section" id="contact">
+        <div class="inner">
+          <div class="section-title-block">
+            <h2 class="section-title"><i class="fas fa-envelope fa-lg"><span class="section-title-css">CONTACT</span></i></h2>
+            <br>
+            <br>
+            <p class="section-desc">
+                <h4><a href="enter.umezawa@gmail.com" target="_blank">enter.umezawa@gmail.com</a></h4>
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer id="footer">
+      <div class="inner">
+        <nav class="footer-link">
+          <ul>
+            <li><a href="#Profile">Profile</a></li>
+            <li><a href="#EXPERIENCE">EXPERIENCE</a></li>
+            <li><a href="#contact">CONTACT</a></li>
+          </ul>
+        </nav>
+        <p class="copyright">© 2024 Umezawa Shuta. All Rights Reserved.</p>
+      </div>
+    </footer>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script type='text/javascript' src="js/photoswipe/photoswipe.min.js"></script>
+  <script type='text/javascript' src="js/photoswipe/photoswipe-ui-default.js"></script>
+  <script type='text/javascript' src="js/photoswipe/photoswipe_setup.js"></script>
+  <script type='text/javascript' src="js/script.js"></script>
+  <script>
+window.addEventListener('DOMContentLoaded', (event) => {
+  if (window.matchMedia('(max-width: 600px)').matches) {
+    var element = document.getElementById("langChenge2");
+    if (element !== null) {
+      element.parentNode.removeChild(element);
+    }
+  }
+});
+</script>
+</body>
+</html>
